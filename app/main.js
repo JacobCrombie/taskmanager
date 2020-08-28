@@ -1,4 +1,3 @@
-import ValuesController from "./Controllers/ValuesController.js";
 import { TasksController } from "./Controllers/TasksController.js";
 
 class App {

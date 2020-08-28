@@ -10,12 +10,46 @@
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/style.css">
-    <title>taskmanager</title>
+    <title>TaskMaster</title>
 </head>
 
 <body>
 
-    <h1>Hello taskmanager</h1>
+    <header class="container-fluid">
+        <div class="row bg-secondary">
+            <div class="col text-center d-flex">
+                <h1 class="col">Task Master</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+
+        <section class="row">
+            <div class="col my-3">
+                <label for="createlist">Create Task List</label>
+                <form class="form-group col-6 d-flex flex-direction-row" onsubmit="app.taskscontroller.createList(event)">
+                  <input type="text"
+                      class="form-control form-control-sm" name="createlist" id="createlist" aria-describedby="helpId" placeholder="List Name...">
+                      <button type="submit" class="btn-success ml-1">Create</button>
+                </form>
+            </div>
+        </section>
+
+
+    </main>
+
+<footer class="container-fluid">
+    <div class="row bg-secondary">
+        <div class="col">
+            <h3 class="col text-center">Made By: Jake</h3>
+        </div>
+    </div>
+</footer>
+
+
+
 
     <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js'
         integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN'
