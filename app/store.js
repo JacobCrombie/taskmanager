@@ -3,7 +3,12 @@ import { Task } from "./Models/Task.js";
 let _state = {
   /** @type {Task[]} */
   tasks: [
-    new Task ()
+    // @ts-ignore
+    new Task ({tasklist: "Clean", }),
+    // @ts-ignore
+    new Task ({tasklist: "Clean", }),
+    // @ts-ignore
+    new Task ({tasklist: "Clean", })
   ]
 };
 

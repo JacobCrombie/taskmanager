@@ -29,24 +29,49 @@
         <section class="row">
             <div class="col my-3">
                 <label for="createlist">Create Task List</label>
-                <form class="form-group col-6 d-flex flex-direction-row" onsubmit="app.taskscontroller.createList(event)">
-                  <input type="text"
-                      class="form-control form-control-sm" name="createlist" id="createlist" aria-describedby="helpId" placeholder="List Name...">
-                      <button type="submit" class="btn-success ml-1">Create</button>
+                <form class="form-group col-6 d-flex flex-direction-row"
+                    onsubmit="app.tasksController.createList(event)">
+                    <input type="text" class="form-control" name="tasklist" id="tasklist"
+                        aria-describedby="helpId" placeholder="List Name...">
+                            <label class="mx-1" for="type">Color:</label>
+                            <select name="listcolor" class="form-control">
+                                <option class="bg-blue" value="bg-blue" selected>Blue</option>
+                                <option class="bg-red" value="bg-red">Red</option>
+                                <option class="bg-green" value="bg-green">Green</option>
+                                <option class="bg-orange" value="bg-orange">Orange</option>
+                            </select>
+                    <button type="submit" class="btn-success ml-1">Create</button>
                 </form>
             </div>
         </section>
 
+        <section class="row">
+            <div class="col d-flex flex-wrap" id="tasklists">
+                <div class="col-4 my-1">
+                    <div class="card">
+                        <h5 class="card-header">Task List <i class="fa fa-trash"></i></h5>
+                        <div class="card-body">
+                            <ul class="text-wrap">
+                                <li><input type="checkbox" class="mr-1">TASK<i class="fa fa-trash"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
 
     </main>
 
-<footer class="container-fluid">
-    <div class="row bg-secondary">
-        <div class="col">
-            <h3 class="col text-center">Made By: Jake</h3>
+    <footer class="container-fluid">
+        <div class="row bg-secondary">
+            <div class="col">
+                <h3 class="col text-center">Made By: Jake</h3>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
 
 

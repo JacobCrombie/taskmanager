@@ -13,3 +13,27 @@ main {
 }
 
 footer {}
+
+ul{
+  list-style-type: none;
+}
+
+.pabsolute{
+  position: absolute;
+}
+
+.bg-blue{
+  background-color: rgb(29, 216, 230);
+}
+
+.bg-green{
+  background-color: rgb(53, 233, 8);
+}
+
+.bg-red{
+  background-color: rgb(236, 15, 15);
+}
+
+.bg-orange{
+  background-color: rgb(255, 115, 0);
+}
