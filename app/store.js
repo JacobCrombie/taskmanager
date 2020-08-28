@@ -1,9 +1,10 @@
-import Value from "./Models/Value.js";
+import { Task } from "./Models/Task.js";
 
 let _state = {
-  activeValue: new Value({ title: "Value" }),
-  /** @type {Value[]} */
-  values: []
+  /** @type {Task[]} */
+  tasks: [
+    new Task ()
+  ]
 };
 
 class Store {
@@ -11,6 +12,7 @@ class Store {
    * Provides access to application state data
    */
   get State() {
+    console.log("state check");
     return _state;
   }
 }
