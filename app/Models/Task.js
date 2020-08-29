@@ -12,7 +12,7 @@ export class Task {
     return `
         <div class="col-4 my-1">
             <div class="card">
-              <h5 class="card-header ${this.listcolor}">${this.tasklist} <i class="far fa-times-circle" onclick="app.tasksController.removeTaskList('${this.id}')"></i></h5>
+              <h5 class="card-header ${this.listcolor}">${this.tasklist} <i class="far fa-times-circle hvr-grow" onclick="app.tasksController.removeTaskList('${this.id}')"></i></h5>
               <div class="card-body">
                   <ul class="text-wrap">
                       ${this.tasksTemplate}
@@ -27,7 +27,7 @@ export class Task {
     let template = ""
 
     this.tasks.forEach(t => {
-      template += `<li><input type="checkbox" class="mr-1">${t}<i class="fa fa-trash"></i></li>`
+      template += `<li><input type="checkbox" class="mr-1 hvr-grow">${t}<i class="fa fa-trash hvr-grow"></i></li>`
     });
 
     return template
