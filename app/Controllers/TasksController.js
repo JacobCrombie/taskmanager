@@ -2,6 +2,7 @@ import { SERVICE } from "../Services/TasksService.js";
 import STORE from "../store.js";
 
 function _drawTaskList() {
+  STORE.saveState()
   let template = ""
   STORE.State.tasks.forEach(t => template += t.tasklistTemplate)
   document.getElementById("tasklists").innerHTML = template
@@ -24,8 +25,21 @@ export class TasksController {
     _drawTaskList()
   }
 
-  removeTaskList(id){
+  removeTaskList(id) {
     SERVICE.removeTaskList(id)
+    _drawTaskList()
+  }
+
+  createTask(event, id) {
+    event.preventDefault()
+    let form = event.target
+    let newTask = form.task.value
+    SERVICE.createTask(newTask, id)
+    _drawTaskList()
+  }
+
+  removeTask(taskId, taskName) {
+    SERVICE.removeTask(taskId, taskName)
     _drawTaskList()
   }
 }

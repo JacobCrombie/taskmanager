@@ -10,16 +10,22 @@ export class Task {
 
   get tasklistTemplate() {
     return `
-        <div class="col-4 my-1">
-            <div class="card">
-              <h5 class="card-header ${this.listcolor}">${this.tasklist} <i class="far fa-times-circle hvr-grow" onclick="app.tasksController.removeTaskList('${this.id}')"></i></h5>
-              <div class="card-body">
-                  <ul class="text-wrap">
-                      ${this.tasksTemplate}
-                  </ul>
-              </div>
-            </div>
-          </div>
+    <div class="col-4 my-1">
+      <div class="card">
+        <h5 class="card-header ${this.listcolor}">${this.tasklist} <i class="far fa-times-circle hvr-grow" onclick="app.tasksController.removeTaskList('${this.id}')"></i></h5>
+        <div class="card-body">
+          <ul class="text-wrap">
+            ${this.tasksTemplate}
+          </ul>
+        </div>
+        <form class="form-group col d-flex flex-direction-row"
+          onsubmit="app.tasksController.createTask(event, '${this.id}')">
+          <input type="text" class="form-control" name="task" id="task" placeholder="Enter Task...">
+            <button type="submit" class="${this.listcolor} ml-1 hvr-grow"><i class="fa fa-plus-circle"
+              aria-hidden="true"></i></button>
+        </form>
+      </div>
+    </div>
     `
   }
 
@@ -27,7 +33,7 @@ export class Task {
     let template = ""
 
     this.tasks.forEach(t => {
-      template += `<li><input type="checkbox" class="mr-1 hvr-grow">${t}<i class="fa fa-trash hvr-grow"></i></li>`
+      template += `<li class= "my-1"><input type="checkbox" class="mr-1 hvr-grow">${t}<i class="fa fa-trash hvr-grow" onclick= "app.tasksController.removeTask('${this.id}', '${t}')"></i></li>`
     });
 
     return template
