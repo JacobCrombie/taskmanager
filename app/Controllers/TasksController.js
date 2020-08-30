@@ -26,7 +26,9 @@ export class TasksController {
   }
 
   removeTaskList(id) {
-    SERVICE.removeTaskList(id)
+    if (window.confirm("Are You Sure You Want To Delete?")) {
+      SERVICE.removeTaskList(id)
+    }
     _drawTaskList()
   }
 
@@ -39,7 +41,10 @@ export class TasksController {
   }
 
   removeTask(taskId, taskName) {
-    SERVICE.removeTask(taskId, taskName)
+    if (window.confirm("Are You Sure You Want To Remove?")) {
+      // @ts-ignore
+      window.close(SERVICE.removeTask(taskId, taskName))
+    }
     _drawTaskList()
   }
 }

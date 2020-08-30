@@ -47,42 +47,8 @@
 
         <section class="row">
             <div class="col d-flex flex-wrap" id="tasklists">
-                <div class="col-4 my-1">
-                    <div class="card">
-                        <h5 class="card-header">Task List <i class="fa fa-trash"></i></h5>
-                        <div class="card-body">
-                            <ul class="text-wrap">
-                                <li><input type="checkbox" class="mr-1">TASK<i class="fa fa-trash"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
-
-        <section class="row">
-            <div class="col d-flex flex-wrap" id="tasklists">
-                <div class="col-4 my-1">
-                    <div class="card">
-                        <h5 class="card-header">Task List <i class="fa fa-trash"></i></h5>
-                        <div class="card-body">
-                            <ul class="text-wrap">
-                                <li><input type="checkbox" class="mr-1">TASK<i class="fa fa-trash"></i></li>
-                            </ul>
-                        </div>
-                        <form class="form-group col d-flex flex-direction-row"
-                            onsubmit="app.tasksController.createTask(event, id)">
-                            <input type="text" class="form-control" name="task" id="task" placeholder="Enter Task...">
-                            <button type="submit" class="${this.listcolor} ml-1 hvr-grow"><i class="fa fa-plus-circle"
-                                    aria-hidden="true"></i></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
     </main>
 
     <footer class="container-fluid">
@@ -94,8 +60,6 @@
     </footer>
 
 
-
-    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
     <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js'
         integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN'
         crossorigin='anonymous'></script>
