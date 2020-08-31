@@ -10,6 +10,7 @@
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
     <title>TaskMaster</title>
 </head>
@@ -33,7 +34,7 @@
                 <form class="form-group col-6 d-flex flex-direction-row"
                     onsubmit="app.tasksController.createList(event)">
                     <input type="text" class="form-control" name="tasklist" id="tasklist" aria-describedby="helpId"
-                        placeholder="List Name...">
+                        placeholder="List Name..." required>
                     <label class="mx-1" for="type">Color:</label>
                     <select name="listcolor" class="form-control">
                         <option class="bg-blue" value="bg-blue" selected>Blue</option>

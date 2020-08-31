@@ -20,7 +20,7 @@ export class Task {
         </div>
         <form class="form-group col d-flex flex-direction-row"
           onsubmit="app.tasksController.createTask(event, '${this.id}')">
-          <input type="text" class="form-control" name="task" id="task" placeholder="Enter Task...">
+          <input type="text" class="form-control" name="task" id="task" placeholder="Enter Task..." required>
             <button type="submit" class="${this.listcolor} ml-1 hvr-grow"><i class="fa fa-plus-circle"
               aria-hidden="true"></i></button>
         </form>
